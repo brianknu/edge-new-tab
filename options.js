@@ -12,10 +12,10 @@ chrome.storage.sync.get(["redirectUrl"], (res) => {
 button.addEventListener("click", () => {
   const url = input.value.trim();
   if (!url.startsWith("http")) {
-    alert("Ingresá una URL válida (http o https)");
+    alert("Invalid URL");
     return;
   }
   chrome.storage.sync.set({ redirectUrl: url }, () => {
-    alert("Guardado ✅");
+    alert("Done ✅");
   });
 });
